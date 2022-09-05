@@ -1,0 +1,21 @@
+services:
+  caraffabot:
+    build:  .
+    links:
+      - "redis:redis"
+    volumes:
+      - ./caraffabot/:/app/caraffabot
+      - ./data/:/app/data/
+    restart:  "no"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=abc
+    command: bash -c "cd /app/ && python3 -m caraffabot"
+  
+  
+  redis:
+    container_name: redis
+    volumes:
+      - ./data/redis:/data
+    image: "redis:alpine"
+    entrypoint: redis-server --appendonly yes

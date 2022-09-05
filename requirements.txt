@@ -1,0 +1,5 @@
+py-cord[speed]==2.1.0
+aiohttp
+si_prefix
+aioredis
+psutil
