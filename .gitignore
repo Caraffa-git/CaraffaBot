@@ -1,0 +1,12 @@
+# media files
+*.webp
+*.jpeg
+*.jpg
+*.mp3
+*.gif
+# settings files
+data/
+*.json
+# IDEs
+.idea
+.vscode
