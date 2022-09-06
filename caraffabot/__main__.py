@@ -30,7 +30,7 @@ enabled_ext = {
     "caraffabot.cogs.electronics",
     "caraffabot.cogs.fun",
     "caraffabot.cogs.image",
-    "caraffabot.cogs.faq",
+    "caraffabot.cogs.info",
     "caraffabot.cogs.utilities",
     "caraffabot.backend.error_handler"
 }
