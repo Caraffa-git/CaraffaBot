@@ -1,12 +1,9 @@
-from ast import alias
-from multiprocessing.sharedctypes import Value
-from turtle import color
-from types import NoneType
 import discord
 import si_prefix
-from random import randint
-from discord.ext import commands, bridge
 import math
+from types import NoneType
+from random import randint
+from discord.ext import commands
 from caraffabot.backend.checks import is_enabled
 
 
