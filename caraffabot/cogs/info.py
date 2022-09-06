@@ -154,7 +154,7 @@ def general_science_embed():
             [Brainiac](https://www.youtube.com/c/brainiac75)
             [CGP Grey](https://www.youtube.com/greymatter)
             [Cody's Lab](https://www.youtube.com/user/theCodyReeder)
-            [Kurzgesagt – In a Nutshell](https://www.youtube.com/c/inanutshell)
+            [Kurzgesagt - In a Nutshell](https://www.youtube.com/c/inanutshell)
             [QuantaScience](https://www.youtube.com/c/QuantaScienceChannel)
             [SciShow](https://www.youtube.com/c/SciShow)
             [Smarter every day](https://www.youtube.com/c/smartereveryday)
@@ -481,4 +481,4 @@ def it_embed():
     return embed
 
 def setup(bot):
-    bot.add_cog(FaqCog(bot))
+    bot.add_cog(InfoCog(bot))
