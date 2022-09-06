@@ -30,6 +30,7 @@ class FunCog(commands.Cog, name="Fun stuff"):
         e = discord.Embed(title="Kitty Cat :cat2:", color = discord.Color.random())
         e.set_image(url=json["image"])
         e.set_footer(text=f"""Fun fact: {json["fact"]}""")
+        
         await ctx.respond(embed=e)
 
     @commands.cooldown(3, 10, commands.BucketType.user)
@@ -45,24 +46,23 @@ class FunCog(commands.Cog, name="Fun stuff"):
         e = discord.Embed(title="Doggo :dog:", color = discord.Color.random())
         e.set_image(url=json["image"])
         e.set_footer(text=f"""Fun fact: {json["fact"]}""")
+
         await ctx.respond(embed=e)
 
     @commands.cooldown(3, 10, commands.BucketType.user)
     @commands.check(can_send_image)
     @commands.slash_command(name="surprise")
     @checks.is_enabled()
-    async def animalphoto(self, ctx, arg = None):
+    async def animalphoto(self, ctx):
         """
         Sends random animal photo with fun fact.
         """
         
         e = discord.Embed(title=":see_no_evil:", color = discord.Color.random())
-        try:
-            json = await url.get_animal_image(self.session, arg)
-            e.set_image(url=json["image"])
-            e.set_footer(text=f"""Fun fact: {json["fact"]}""")
-        except KeyError:
-            await ctx.send(text="This animal isn't listed.", delete_after=2)
+        json = await url.get_animal_image(self.session)
+        e.set_image(url=json["image"])
+        e.set_footer(text=f"""Fun fact: {json["fact"]}""")
+        
         await ctx.respond(embed=e)
 
 def setup(bot):
