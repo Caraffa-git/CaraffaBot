@@ -2,8 +2,7 @@ import discord
 import psutil
 import si_prefix
 from datetime import datetime
-from discord.ext import commands, bridge
-from caraffabot.backend import checks
+from discord.ext import commands
 
 class UtilityCog(commands.Cog, name="Utility commands"):
     """

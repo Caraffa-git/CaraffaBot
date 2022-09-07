@@ -4,8 +4,6 @@ import math
 from types import NoneType
 from random import randint
 from discord.ext import commands
-from caraffabot.backend.checks import is_enabled
-
 
 class TooFewArgsError(Exception):
     pass
@@ -165,7 +163,6 @@ class ElectronicsCog(commands.Cog, name="Electronics commands"):
     def __init__(self, bot):
         self.bot: discord.Bot = bot
 
-    @is_enabled()
     @commands.slash_command(name="div")
     async def divider(self, ctx, *, args=None):
         """
@@ -178,7 +175,6 @@ class ElectronicsCog(commands.Cog, name="Electronics commands"):
             div = VoltageDivider(d={})
         await ctx.send(embed=div.getEmbed())
 
-    @is_enabled()
     @commands.slash_command(name="lc", aliases=["rf", "rfreq", "resfreq"])
     async def frequency(self, ctx, *, args=None):
         """
