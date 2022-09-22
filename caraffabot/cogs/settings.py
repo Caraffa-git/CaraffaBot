@@ -25,7 +25,7 @@ class SettingsCog(commands.Cog, name="Setting commands"):
         await ctx.respond(embed=e)
 
 
-    @commands.has_permissions(owner=True)
+    @commands.is_owner()
     @commands.slash_command(hidden=True)
     async def debug(self, ctx):
         self.bot.debugmode = not self.bot.debugmode

@@ -1,7 +1,5 @@
-from asyncio import exceptions
 import aiohttp
 import random
-
 
 randomapi_animals = {
     "fox": "https://some-random-api.ml/animal/fox",

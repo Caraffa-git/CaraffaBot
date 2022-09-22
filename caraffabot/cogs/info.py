@@ -372,6 +372,7 @@ def electronics_embed():
             If you want to start learning:
             [RSD Academy](https://www.youtube.com/c/RSDAcademy)
             [Leo's Bag of Tricks](https://www.youtube.com/channel/UCe1bjEcBichpiAMhExh0NiQ)
+            [The Offset Volt](https://www.youtube.com/c/TheOffsetVolt/)
             [Element14](https://www.youtube.com/c/element14presents/)
             DIY projects with good explanations:
             [GreatScott!](https://www.youtube.com/c/greatscottlab)
@@ -413,7 +414,8 @@ def electronics_embed():
             [Falstad](https://www.falstad.com/circuit/)
             [LTspice](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html)
             [SimulIDE](https://www.simulide.com/p/home.html)
-            [All about circuits](https://www.allaboutcircuits.com/)""", inline=False
+            [All about circuits](https://www.allaboutcircuits.com/)
+            [Simon Bramble Designs and Tutorials](http://www.simonbramble.co.uk/index.htm)""", inline=False
     )
     
     embed.set_footer(text="Note: You should check out all of those YT channels")

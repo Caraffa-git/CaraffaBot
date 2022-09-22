@@ -1,17 +1,14 @@
-from dis import disco
 import os
 import discord
 import aioredis
 import aiohttp
 import psutil
-from discord.ext import commands, bridge
-
+from discord.ext import bridge
 
 from datetime import datetime
 from abc import ABC
 import json
 from pathlib import Path
-
 
 
 #### static values ####
