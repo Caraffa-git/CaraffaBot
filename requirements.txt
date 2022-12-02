@@ -3,3 +3,4 @@ aiohttp
 si_prefix
 aioredis
 psutil
+emoji
