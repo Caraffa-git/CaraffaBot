@@ -92,9 +92,11 @@ class CaraffaBot(bridge.Bot, ABC):
         self.loop.run_until_complete(self.aiohttp_start())
 
         # redis database 
+        # 4 - info command 
         print("Connecting to redis...")
         try:
             self.redis = aioredis.Redis(host=self.redis_host, db=1, decode_responses=True, port=6379)
+            self.redis_info = aioredis.Redis(host=self.redis_host, db=4, decode_responses=True)
         except aioredis.ConnectionError:
             print("Redis connection failed. Check if redis is running.")
             exit(1)
@@ -119,6 +121,7 @@ for cog in enabled_ext:
         exit(1)
 
 print("All extensions loaded")
+
 
 # start bot with token from settings.json
 try:
