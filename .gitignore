@@ -5,8 +5,8 @@
 *.mp3
 *.gif
 # settings files
-data/
-*.json
+data/redis/
+data/settings.json
 # IDEs
 .idea
 .vscode
